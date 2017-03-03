@@ -1,0 +1,22 @@
+
+
+.title {
+  margin: auto;
+  position: absolute;
+  height: 200px;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.title-text{
+  text-align: center;
+  font-size: 50px;
+  color: #FFF;
+
+}
+.title-text-lower{
+  margin-top: 1.5%;
+  text-align: center;
+  font-size: 25px;
+  color: #FFF;
+
+}

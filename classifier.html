@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>2Dim</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link href="css/classifier.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,300" rel="stylesheet" type="text/css">
+    <link href="css/progress.css" rel="stylesheet">
+
+
+
+
+
+
+
+
+
+    <!-- Custom CSS -->
+    <style>
+    /* Set top padding of the page to match the height of the navbar */
+
+    body {
+        padding-top: 70px;
+    }
+    /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
+
+    .navbar-toggler {
+        z-index: 1;
+    }
+
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+          <a class="navbar-brand" href="#">2Dim</a>
+          <div class="collapse navbar-collapse" id="navbarExample">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="index.html">Intro <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="classifier.html">Classifier</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Methodology</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contribute</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    </div>
+    <!-- Page Content -->
+    <div class="centered_upload">
+      <div class="file-drop-area">
+      <span class="fake-btn">Choose files</span>
+      <span class="file-msg js-set-number">or drag and drop files here</span>
+      <input class="file-input" type="file" multiple>
+
+    </div>
+
+    <div class="centered_upload_button">
+    <button class="upload_button_main" id="next" type="button" class="btn btn-success">Next</button></div>
+
+    </div>
+
+
+
+
+<div class="centered_form">
+  <form id="form_mega">
+    <div class="field half">
+      <label for="surname">First name</label>
+      <input type="text" id="surname"/>
+    </div>
+    <div class="field half last">
+      <label for="name">last name</label>
+      <input type="text" id="name"/>
+    </div>
+    <div class="field tnb">
+      <label for="Organization">Organization</label>
+      <input type="text" id="Organization"/>
+    </div>
+    <div class="field tnb">
+      <label for="email">Email address</label>
+      <input type="email" id="email"/>
+    </div>
+
+    <div class="field tnb">
+      <label for="msg">Message</label>
+      <textarea name="msg"></textarea>
+    </div>
+  </form>
+</div>
+<div class="centered_upload_button">
+<button class="upload_button_main" id="upload" type="button" class="btn btn-success">Submit Images</button></div>
+
+
+
+
+<div class="wrapper_progress">
+  <div class="container_progress">
+    <div class="label one">Stripping Backgrounds</div>
+    <div class="progress-bar">
+      <div class="progress fill-1">
+        <div class="glow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_progress">
+    <div class="label two">Determining Substrate</div>
+    <div class="progress-bar">
+      <div class="progress fill-2">
+        <div class="glow"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container_progress">
+    <div class="label three">Analyzing Layers</div>
+    <div class="progress-bar">
+      <div class="progress fill-3">
+        <div class="glow"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="centered_upload_button">
+<button class="upload_button_main" id="results" type="button" class="btn btn-success">View Results</button></div>
+
+<div class="results_page">
+  <section>
+    <!--for demo wrap-->
+    <h1>Results</h1>
+    <div class="tbl-header">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <thead>
+          <tr>
+            <th>Filename</th>
+            <th>Thickness</th>
+            <th>Substrate</th>
+            <th>Confidence</th>
+            <th>Something</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <div class="tbl-content">
+      <table cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+          <tr>
+            <td>AAC</td>
+            <td>AUSTRALIAN COMPANY </td>
+            <td>$1.38</td>
+            <td>+2.01</td>
+            <td>-0.36%</td>
+          </tr>
+          <tr>
+            <td>AAD</td>
+            <td>AUSENCO</td>
+            <td>$2.38</td>
+            <td>-0.01</td>
+            <td>-1.36%</td>
+          </tr>
+          <tr>
+            <td>AAX</td>
+            <td>ADELAIDE</td>
+            <td>$3.22</td>
+            <td>+0.01</td>
+            <td>+1.36%</td>
+          </tr>
+          <tr>
+            <td>XXD</td>
+            <td>ADITYA BIRLA</td>
+            <td>$1.02</td>
+            <td>-1.01</td>
+            <td>+2.36%</td>
+          </tr>
+          <tr>
+            <td>AAC</td>
+            <td>AUSTRALIAN COMPANY </td>
+            <td>$1.38</td>
+            <td>+2.01</td>
+            <td>-0.36%</td>
+          </tr>
+          <tr>
+            <td>AAD</td>
+            <td>AUSENCO</td>
+            <td>$2.38</td>
+            <td>-0.01</td>
+            <td>-1.36%</td>
+          </tr>
+          <tr>
+            <td>AAX</td>
+            <td>ADELAIDE</td>
+            <td>$3.22</td>
+            <td>+0.01</td>
+            <td>+1.36%</td>
+          </tr>
+          <tr>
+            <td>XXD</td>
+            <td>ADITYA BIRLA</td>
+            <td>$1.02</td>
+            <td>-1.01</td>
+            <td>+2.36%</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="centered_upload_button">
+  <button class="upload_button_main" id="download_csv" type="button" class="btn btn-success">Download as CSV</button></div>
+</div>
+
+    <!-- jQuery Version 3.1.1 -->
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Tether -->
+    <script src="js/tether.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/upload.js"></script>
+
+
+
+
+
+</body>
+
+</html>
