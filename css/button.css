@@ -16,7 +16,7 @@ button::after {
 	transition: all 0.3s;
 }
 
-button {
+.button_begin {
   background: none;
   border: 3px solid #fff;
   border-radius: 5px;
