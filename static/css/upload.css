@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700);
+
+
+h2 {
+  text-align: center;
+  margin: 50px 0;
+}
+
+.file-drop-area {
+  border: 2px dashed #fff;
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  max-width: 100%;
+  margin: 0 auto;
+  margin-top:40px;
+  padding: 26px 20px 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.file-drop-area.is-active {
+  background-color: #25a25a;
+}
+
+.fake-btn, .upload_button_main {
+  background-color: #2ecc71;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 15px;
+  margin-left:50px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-msg {
+  color: #fff;
+  font-size: small;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align:center;
+  max-width: calc(100% - 130px);
+  vertical-align: middle;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+.file-input:focus {
+  outline: none;
+}

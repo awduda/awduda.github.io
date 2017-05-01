@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>2Dim</title>
+
+    <!-- Bootstrap Core CSS -->
+
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../static/css/anim.css" rel="stylesheet">
+    <link href="../static/css/contribute.css" rel="stylesheet">
+    <link href="../static/css/upload.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+
+
+
+
+
+
+    <!-- Custom CSS -->
+    <style>
+    /* Set top padding of the page to match the height of the navbar */
+
+    body {
+        padding-top: 70px;
+    }
+    /* Ugly hacks to fix the container within navbar functionality - should be fixed in Bootstrap 4 beta */
+
+    .navbar-toggler {
+        z-index: 1;
+    }
+
+    @media (max-width: 576px) {
+        nav > .container {
+            width: 100%;
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+  <nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="container">
+          <a class="navbar-brand" href="/">2Dim</a>
+          <div class="collapse navbar-collapse" id="navbarExample">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" href="/">Intro <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="/classify/">Classifier</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Methodology</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/contribute/">Contribute</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+    </div>
+
+
+      <div id="intro_title" class="title">
+          <div class="title-text">Add to our <b>training set</b>!</div>
+          <div class="title-text-lower">We'll love you forever.</div>
+          <div class="file-drop-area">
+            <span class="fake-btn">Choose files</span>
+            <span class="file-msg js-set-number">or drag and drop files here</span>
+            <input id="browse" class="file-input" type="file" multiple>
+          </div>
+
+      </div>
+
+      <div id="exit_title" class="title">
+          <div class="title-text">Thank you!</div>
+          <div class="title-text-lower">Your data will help our model grow stronger.</div>
+      </div>
+
+
+
+    <div id="center_container">
+      <div id="image_list_container">
+
+
+      </div>
+      <div id="selected_image_container">
+        <div id="selected_image"></div>
+        <div id="button_container">
+          <div id="button_placer">
+           <button id="add_thickness" class="btn btn-secondary" type="button">Add Thickness</button>
+           <button id="mark_background" class="btn btn-secondary" type="button">Mark Background</button>
+
+          <select class="btn btn-secondary" name="hi" id="background_selection">
+              <option value="unknown">Choose Substrate...</option>
+              <option value="silicon">Si03</option>
+              <option value="boron">Boron</option>
+              <option value="nitrogen">Ni</option>
+              <option value="something">Something</option>
+          </select>
+          <button id="clear" class="btn btn-secondary" type="button">Clear</button>
+          <button id="continue" class="btn btn-secondary disabled" type="button">Continue</button>
+        </div>
+        <div id="progress_holder">
+        <div class="progress-wrap progress" data-progress-percent="25">
+          <div class="progress-bar progress"></div>
+        </div>
+
+
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+    <!-- jQuery Version 3.1.1 -->
+
+    <script src="../static/js/jquery-3.1.1.min.js"></script>
+
+    <!-- Tether -->
+    <script src="../static/js/tether.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/contribute_upload.js"></script>
+    <script src="../static/js/numjs.min.js"></script>
+
+
+
+
+
+
+
+</body>
+
+</html>
