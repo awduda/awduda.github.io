@@ -3,10 +3,11 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.sql.expression import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.dialects.postgresql import JSON
+import os
 
 
 app = Flask(__name__,static_url_path='/static')
-app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://twodim_user:twodim_pass@localhost:5432/twodim'
+app.config['SQLALCHEMY_DATABASE_URI']= os.environ['DATABASE_URL']
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 app.secret_key = 'some_secret'
