@@ -28,14 +28,10 @@ def training_add():
         if request.method == 'POST':
             data=json.loads(request.get_json())
 
-            file_name=data['filename']
-            file_type=data['filetype']
-            file_URL="HI"
-            real_width=data['width']
-            real_height=data['height']
+
             background_data=data['background_data']
-            thickness_points=data['thickness_data']
-            t=training(file_name,file_URL,file_type,real_height,real_width,background_data,thickness_points)
+            thickness_data=data['thickness_data']
+            t=training(background_data,thickness_data)
             q=t.add(t)
             return("hi")
 

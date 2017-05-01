@@ -20,24 +20,15 @@ db = SQLAlchemy(app)
 class training(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
-    created_on=db.Column(db.TIMESTAMP,server_default=db.func.current_timestamp())
-    file_name = db.Column(db.String(255),nullable=False)
-    file_type = db.Column(db.String(255),nullable=False)
-    file_URL = db.Column(db.String(255))
-    real_height = db.Column(db.Integer)
-    real_width = db.Column(db.Integer)
-    thickness_points=db.Column(JSON)
+
+    thickness_data=db.Column(JSON)
     background_data=db.Column(JSON)
 
-    def __init__(self, file_name,file_URL,file_type,real_height,real_width,background_data,thickness_points):
+    def __init__(self, background_data,thickness_data):
 
-        self.file_name=file_name
-        self.file_URL=file_URL
-        self.file_type=file_type
-        self.real_height=real_height
-        self.real_width=real_width
+
         self.background_data=background_data
-        self.thickness_points=thickness_points
+        self.thickness_data=thickness_data
 
 
     def add(self,data):
