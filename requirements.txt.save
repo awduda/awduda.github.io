@@ -1,0 +1,10 @@
+Flask==0.12
+zzzzxchemy==2.2
+gunicorn==19.7.1
+html5lib==0.999
+httplib2==0.9.1
+psycopg2==2.6.1
+python-dateutil==2.5.3
+SQLAlchemy==1.1.6
+sqlparse==0.1.18
+urllib3==1.13.1

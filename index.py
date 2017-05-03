@@ -22,16 +22,23 @@ def classifier():
 def contribute():
     return render_template('contribute.html')
 
-
 @app.route('/add_training/' , methods=['POST', 'GET'])
 def training_add():
         if request.method == 'POST':
             data=json.loads(request.get_json())
 
 
-            background_data=data['background_data']
-            thickness_data=data['thickness_data']
-            t=training(background_data,thickness_data)
+            red_c_gs=data['red_c_gs']
+            green_c_gs=data['green_c_gs']
+            blue_c_gs=data['blue_c_gs']
+            color_c=data['color_c']
+            background_type=data['background_type']
+            num_layers=data['num_layers']
+
+
+
+
+            t=training(red_c_gs,green_c_gs,blue_c_gs,color_c,background_type,num_layers)
             q=t.add(t)
             return("hi")
 

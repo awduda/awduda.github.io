@@ -21,14 +21,23 @@ class training(db.Model):
 
     id = db.Column(db.Integer, primary_key=True)
 
-    thickness_data=db.Column(JSON)
-    background_data=db.Column(JSON)
+    red_c_gs=db.Column(db.Float)
+    green_c_gs=db.Column(db.Float)
+    blue_c_gs=db.Column(db.Float)
+    color_c=db.Column(db.Float)
+    background_type=db.Column(db.String(40))
+    num_layers=db.Column(db.Integer)
 
-    def __init__(self, background_data,thickness_data):
+
+    def __init__(self, red_c_gs,green_c_gs,blue_c_gs,color_c,background_type,num_layers):
 
 
-        self.background_data=background_data
-        self.thickness_data=thickness_data
+        self.red_c_gs=red_c_gs
+        self.green_c_gs=green_c_gs
+        self.blue_c_gs=blue_c_gs
+        self.color_c=color_c
+        self.background_type=background_type
+        self.num_layers=num_layers
 
 
     def add(self,data):
