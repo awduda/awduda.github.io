@@ -7,11 +7,11 @@ import os
 
 
 app = Flask(__name__,static_url_path='/static')
-app.config['SQLALCHEMY_DATABASE_URI']= os.environ['DATABASE_URL']
-app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-app.config['TEMPLATES_AUTO_RELOAD'] = True
-app.secret_key = 'some_secret'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_DATABASE_URI']= os.environ['DATABASE_URL']
+# app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+# app.config['TEMPLATES_AUTO_RELOAD'] = True
+# app.secret_key = 'some_secret'
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 

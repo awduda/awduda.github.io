@@ -6,6 +6,12 @@ from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.dialects.postgresql import JSON
 import os
 import json
+import sklearn
+import psycopg2 as pg
+import pandas.io.sql as psql
+from sklearn import linear_model
+from sqlalchemy import create_engine
+
 
 
 from model import training,app
@@ -18,9 +24,38 @@ def classifier():
     return render_template('classifier.html')
 
 
+
+
 @app.route('/contribute/')
 def contribute():
     return render_template('contribute.html')
+
+
+@app.route('/classify_data/')
+def classify_data():
+
+
+    if request.method=='POST':
+
+        data=json.loads(request.get_json())
+        red_c_gs=data['red_c_gs']
+        green_c_gs=data['green_c_gs']
+        blue_c_gs=data['blue_c_gs']
+        color_c=data['color_c']
+        background_type=data['background_type']
+        engine = create_engine(DATABASE_URL)
+        dataframe = psql.frame_query("SELECT * FROM training", engine)
+        x = dataframe['color_c']
+        y = train_data['num_layers']
+        x = x.reshape(-1,1)
+        y = y.reshape(-1,1)
+        model = linear_model.LinearRegression()
+        model.fit(x, y)
+        return dataframe.head()
+
+
+
+
 
 @app.route('/add_training/' , methods=['POST', 'GET'])
 def training_add():

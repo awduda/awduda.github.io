@@ -15,13 +15,11 @@
 
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link href="../static/css/classifier.css" rel="stylesheet">
+    <link href="../static/css/anim.css" rel="stylesheet">
+    <link href="../static/css/contribute.css" rel="stylesheet">
     <link href="../static/css/upload.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,300" rel="stylesheet" type="text/css">
-    <link href="../static/css/progress.css" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
 
 
@@ -83,183 +81,72 @@
   </nav>
 
     </div>
-    <!-- Page Content -->
-    <div class="centered_upload">
-      <div class="file-drop-area">
-      <span class="fake-btn">Choose files</span>
-      <span class="file-msg js-set-number">or drag and drop files here</span>
-      <input class="file-input" type="file" multiple>
-
-    </div>
-
-    <div class="centered_upload_button">
-    <button class="upload_button_main" id="next" type="button" class="btn btn-success">Next</button></div>
-
-    </div>
 
 
+      <div id="intro_title" class="title">
+          <div class="title-text">Welcome to our <b>thickness</b> detector</div>
+          <div class="title-text-lower">Click below to start</div>
+          <div class="file-drop-area">
+            <span class="fake-btn">Choose files</span>
+            <span class="file-msg js-set-number">or drag and drop files here</span>
+            <input id="browse" class="file-input" type="file">
+          </div>
 
-
-<div class="centered_form">
-  <form id="form_mega">
-    <div class="field half">
-      <label for="surname">First name</label>
-      <input type="text" id="surname"/>
-    </div>
-    <div class="field half last">
-      <label for="name">last name</label>
-      <input type="text" id="name"/>
-    </div>
-    <div class="field tnb">
-      <label for="Organization">Organization</label>
-      <input type="text" id="Organization"/>
-    </div>
-    <div class="field tnb">
-      <label for="email">Email address</label>
-      <input type="email" id="email"/>
-    </div>
-
-    <div class="field tnb">
-      <label for="msg">Message</label>
-      <textarea name="msg"></textarea>
-    </div>
-  </form>
-</div>
-<div class="centered_upload_button">
-<button class="upload_button_main" id="upload" type="button" class="btn btn-success">Submit Images</button></div>
-
-
-
-
-<div class="wrapper_progress">
-  <div class="container_progress">
-    <div class="label one">Stripping Backgrounds</div>
-    <div class="progress-bar">
-      <div class="progress fill-1">
-        <div class="glow"></div>
       </div>
-    </div>
-  </div>
 
-  <div class="container_progress">
-    <div class="label two">Determining Substrate</div>
-    <div class="progress-bar">
-      <div class="progress fill-2">
-        <div class="glow"></div>
+      <div id="exit_title" class="title">
+          <div class="title-text">Thank you!</div>
       </div>
-    </div>
-  </div>
 
-  <div class="container_progress">
-    <div class="label three">Analyzing Layers</div>
-    <div class="progress-bar">
-      <div class="progress fill-3">
-        <div class="glow"></div>
+
+
+    <div id="center_container">
+      <div id="image_list_container">
+
+
       </div>
+      <div id="selected_image_container">
+        <div id="selected_image"></div>
+        <div id="button_container">
+          <div id="button_placer">
+           <button id="add_thickness" class="btn btn-secondary" type="button">Add Calculation Point</button>
+           <button id="mark_background" class="btn btn-secondary" type="button">Mark Background</button>
+
+          <select class="btn btn-secondary" name="hi" id="background_selection">
+              <option value="unknown">Choose Substrate...</option>
+              <option value="silicon">Si03</option>
+              <option value="boron">Boron</option>
+              <option value="nitrogen">Ni</option>
+              <option value="something">Something</option>
+          </select>
+          <button id="clear" class="btn btn-secondary" type="button">Clear</button>
+          <button id="classify" class="btn btn-secondary" type="button">Detect</button>
+        </div>
+
+
+
+
+
+        </div>
+      </div>
+
     </div>
-  </div>
-</div>
-
-<div class="centered_upload_button">
-<button class="upload_button_main" id="results" type="button" class="btn btn-success">View Results</button></div>
-
-<div class="results_page">
-  <section>
-    <!--for demo wrap-->
-    <h1>Results</h1>
-    <div class="tbl-header">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <thead>
-          <tr>
-            <th>Filename</th>
-            <th>Thickness</th>
-            <th>Substrate</th>
-            <th>Confidence</th>
-            <th>Something</th>
-          </tr>
-        </thead>
-      </table>
-    </div>
-    <div class="tbl-content">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tbody>
-          <tr>
-            <td>AAC</td>
-            <td>AUSTRALIAN COMPANY </td>
-            <td>$1.38</td>
-            <td>+2.01</td>
-            <td>-0.36%</td>
-          </tr>
-          <tr>
-            <td>AAD</td>
-            <td>AUSENCO</td>
-            <td>$2.38</td>
-            <td>-0.01</td>
-            <td>-1.36%</td>
-          </tr>
-          <tr>
-            <td>AAX</td>
-            <td>ADELAIDE</td>
-            <td>$3.22</td>
-            <td>+0.01</td>
-            <td>+1.36%</td>
-          </tr>
-          <tr>
-            <td>XXD</td>
-            <td>ADITYA BIRLA</td>
-            <td>$1.02</td>
-            <td>-1.01</td>
-            <td>+2.36%</td>
-          </tr>
-          <tr>
-            <td>AAC</td>
-            <td>AUSTRALIAN COMPANY </td>
-            <td>$1.38</td>
-            <td>+2.01</td>
-            <td>-0.36%</td>
-          </tr>
-          <tr>
-            <td>AAD</td>
-            <td>AUSENCO</td>
-            <td>$2.38</td>
-            <td>-0.01</td>
-            <td>-1.36%</td>
-          </tr>
-          <tr>
-            <td>AAX</td>
-            <td>ADELAIDE</td>
-            <td>$3.22</td>
-            <td>+0.01</td>
-            <td>+1.36%</td>
-          </tr>
-          <tr>
-            <td>XXD</td>
-            <td>ADITYA BIRLA</td>
-            <td>$1.02</td>
-            <td>-1.01</td>
-            <td>+2.36%</td>
-          </tr>
 
 
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <div class="centered_upload_button">
-  <button class="upload_button_main" id="download_csv" type="button" class="btn btn-success">Download as CSV</button></div>
-</div>
 
     <!-- jQuery Version 3.1.1 -->
 
-
     <script src="../static/js/jquery-3.1.1.min.js"></script>
+
     <!-- Tether -->
     <script src="../static/js/tether.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/upload.js"></script>
+    <script src="../static/js/classify.js"></script>
+    <script src="../static/js/numjs.min.js"></script>
+
+
 
 
 
